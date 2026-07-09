@@ -56,8 +56,6 @@ public class AccountController {
 	    
       Person personData = new Person(request.firstName(), request.lastName(), request.mailAdress(), request.phoneNumber());
       UserDto dto = accountManagement.createAccount(new User(request.userName(), request.role(), personData));
-        
-        
         return ResponseEntity.status(HttpStatus.CREATED).body(dto);
     }
 

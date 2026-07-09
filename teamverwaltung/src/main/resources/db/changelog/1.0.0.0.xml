@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+						https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+	
+	<changeSet author="kgambel" id="1773232173181-1">
+			<createSequence sequenceName="USERDATA_SEQUENCE"/>
+	</changeSet>
+	
+	<changeSet author="kgambel" id="1773232173181-2">
+		<createTable tableName="USERDATA_ENTITY">
+			<column name="ID" type="INT">
+				<constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_9"/>
+			</column>
+		</createTable>
+	</changeSet>
+	
+		
+</databaseChangeLog>
