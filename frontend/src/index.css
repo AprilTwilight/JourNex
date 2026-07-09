@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, Consolas, monospace;
+
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-500: #2563eb;
+  --color-brand-600: #1d4ed8;
+  --color-brand-700: #1e40af;
+
+  --color-surface: #ffffff;
+  --color-surface-muted: #f8fafc;
+  --color-border: #e2e8f0;
+  --color-text: #334155;
+  --color-text-heading: #0f172a;
+}
+
+@layer base {
+  body {
+    @apply m-0 min-h-svh bg-surface-muted font-sans text-text antialiased;
+  }
+
+  #root {
+    @apply mx-auto min-h-svh w-full max-w-5xl border-x border-border bg-surface;
+  }
+}
