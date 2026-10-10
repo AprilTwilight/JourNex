@@ -1,0 +1,45 @@
+@startuml
+
+class Leader {
+- firstName : String
+- lastName : String
+- birthDate : Date
+- mailAdress: String
+- phoneNum: Long
+# role : Role
+# discordName : String
+# teamName : String
+}
+
+enum Role {
+Teamleader
+Clanleader
+Player
+Analyst
+Coach
+}
+
+
+class Person{
+- rank : Rank
+}
+
+class Team{
+- logo : String
+- banner : String
+- teamName : Sting
+- coach : Person
+- analyst : Person
+- playerNum : Int
+- leader : List<Leader>
+- player : List<Person>
+}
+
+Leader <|-r- Person
+
+
+Team *-- Leader
+Team o-- Person
+
+
+@enduml
